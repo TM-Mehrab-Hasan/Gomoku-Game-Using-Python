@@ -182,4 +182,11 @@ pyinstaller --onefile --windowed --name=GomokuGame --add-data="GUI_Pic;GUI_Pic" 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-and professional game mechanics. Built with Python & Pygame.
+
+---
+
+**GitHub Repository Description:**
+Modern Gomoku (Five in a Row) strategy game with intelligent AI opponents, beautiful graphics, and standalone executable. Features multiple difficulty levels, intuitive UI, and professional game mechanics. Built with Python & Pygame.
+
+**GitHub Tags:**
+`gomoku` `five-in-a-row` `strategy-game` `python` `pygame` `artificial-intelligence` `game-development` `board-game` `standalone-executable` `cross-platform` `gui-application` `educational-project` `minimax-algorithm` `pattern-recognition` `game-ai`

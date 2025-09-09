@@ -7,6 +7,7 @@ import pygame
 from pygame.locals import *
 from time import sleep
 import random
+import sys
 
 # Constants
 BOARD_SIZE = 15
@@ -165,14 +166,14 @@ class GomokuGUI:
             pygame.display.update()
             
             for event in pygame.event.get():
-                if event.type == QUIT:
-                    exit()
-                elif event.type == KEYDOWN:
+                if event.type == pygame.QUIT:
+                    sys.exit()
+                elif event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_1:
                         return 'human_ai'
                     elif event.key == pygame.K_2:
                         return 'human_human'
-                elif event.type == MOUSEBUTTONDOWN:
+                elif event.type == pygame.MOUSEBUTTONDOWN:
                     if rect1.collidepoint(event.pos):
                         return 'human_ai'
                     elif rect2.collidepoint(event.pos):
@@ -217,14 +218,14 @@ class GomokuGUI:
             pygame.display.update()
             
             for event in pygame.event.get():
-                if event.type == QUIT:
-                    exit()
-                elif event.type == KEYDOWN:
+                if event.type == pygame.QUIT:
+                    sys.exit()
+                elif event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_b:
                         return 1
                     elif event.key == pygame.K_w:
                         return -1
-                elif event.type == MOUSEBUTTONDOWN:
+                elif event.type == pygame.MOUSEBUTTONDOWN:
                     if black_rect.collidepoint(event.pos):
                         return 1
                     elif white_rect.collidepoint(event.pos):
@@ -267,16 +268,16 @@ class GomokuGUI:
             pygame.display.update()
             
             for event in pygame.event.get():
-                if event.type == QUIT:
-                    exit()
-                elif event.type == KEYDOWN:
+                if event.type == pygame.QUIT:
+                    sys.exit()
+                elif event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_e:
                         return 'easy'
                     elif event.key == pygame.K_m:
                         return 'medium'
                     elif event.key == pygame.K_h:
                         return 'hard'
-                elif event.type == MOUSEBUTTONDOWN:
+                elif event.type == pygame.MOUSEBUTTONDOWN:
                     for rect, diff_key in rects:
                         if rect.collidepoint(event.pos):
                             return diff_key
@@ -295,9 +296,9 @@ class GomokuGUI:
             
             while not flag:
                 for event in pygame.event.get():
-                    if event.type == QUIT:
-                        exit()
-                    elif event.type == MOUSEBUTTONDOWN:
+                    if event.type == pygame.QUIT:
+                        sys.exit()
+                    elif event.type == pygame.MOUSEBUTTONDOWN:
                         x, y = pygame.mouse.get_pos()
                         if 25 <= x <= 725 and 25 <= y <= 725:
                             m = int(round((x - 25) / 50))
@@ -368,13 +369,13 @@ class GomokuGUI:
         waiting = True
         while waiting:
             for event in pygame.event.get():
-                if event.type == QUIT:
-                    exit()
-                elif event.type == KEYDOWN:
+                if event.type == pygame.QUIT:
+                    sys.exit()
+                elif event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_r:
                         waiting = False
                     elif event.key == pygame.K_q:
-                        exit()
+                        sys.exit()
 
 def main():
     """Main entry point for Gomoku Game."""
