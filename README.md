@@ -2,9 +2,6 @@
 
 A modern, feature-rich implementation of the classic Gomoku game using Python and Pygame.
 
-## GitHub Repository
-[TM-Mehrab-Hasan/Gomoku-Game-Using-Python](https://github.com/TM-Mehrab-Hasan/Gomoku-Game-Using-Python.git)
-
 ## Features
 - Modular codebase: separate files for game logic, AI, and GUI
 - Human vs AI and Human vs Human modes
